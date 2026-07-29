@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-Sitemap: https://go-apgujeong-nrb.xyz/sitemap.xml
+Sitemap: https://blog.go-apgujeong-nrb.xyz/sitemap.xml
