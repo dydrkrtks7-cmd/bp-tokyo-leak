@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog.go-apgujeong-nrb.xyz/sitemap.xml
-Sitemap: https://blog.go-apgujeong-nrb.xyz/sitemap-pages.xml
+Sitemap: https://sinchon-fullsalon-note.hardcoreroom.com/sitemap.xml
+Sitemap: https://sinchon-fullsalon-note.hardcoreroom.com/sitemap-pages.xml
