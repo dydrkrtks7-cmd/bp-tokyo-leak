@@ -1,315 +1,313 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Design System & Theme Meta Tags -->
-    <meta name="bpaas-design-system" content="brutalist-avantgarde">
-    <meta name="bpaas-design-theme" content="kr-night-signal">
-    <title>발산 인프라 분석 | Night Transit Map</title>
-    
-    <!-- SEO & Social Meta -->
-    <meta name="description" content="발산 지역 지하 음향 네트워크의 주파수 안정성, 통신 지연률 및 전력 공급 리듬을 데이터 기반으로 분석한 'Night Transit Map' 보고서.">
-    <meta name="keywords" content="발산 인프라, Night Transit Map, 발산 네트워크 상태, 코인노래방 스펙 비교, 발산 지역 시그널">
-    
-    <!-- Open Graph & Twitter Card -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="발산 인프라 분석 | Night Transit Map">
-    <meta property="og:description" content="발산 지역 지하 음향 네트워크의 주파수 안정성, 통신 지연률 및 전력 공급 리듬을 데이터 기반으로 분석한">
-    
-    <!-- Canonical -->
-    <link rel="canonical" href="https://sinchon-fullsalon-note.hardcoreroom.com/about.html">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+ <!-- Design System & Theme Meta Tags -->
+ <title>발산 인프라 분석 | Night Transit Map</title>
+ 
+ <!-- SEO & Social Meta -->
+ <meta name="description" content="발산 지역 지하 음향 네트워크의 주파수 안정성, 통신 지연률 및 전력 공급 리듬을 데이터 기반으로 분석한 'Night Transit Map' 보고서.">
+ <meta name="keywords" content="발산 인프라, Night Transit Map, 발산 네트워크 상태, 코인노래방 스펙 비교, 발산 지역 시그널">
+ 
+ <!-- Open Graph & Twitter Card -->
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="발산 인프라 분석 | Night Transit Map">
+ <meta property="og:description" content="발산 지역 지하 음향 네트워크의 주파수 안정성, 통신 지연률 및 전력 공급 리듬을 데이터 기반으로 분석한">
+ 
+ <!-- Canonical -->
+ <link rel="canonical" href="https://sinchon-fullsalon-note.hardcoreroom.com/about.html">
 
-    <style>
-        /* [Design System Core Variables - Inherited] */
-        :root {
-            --bg-color: #0b0d12;             /* Deep Void Black */
-            --text-primary: #e0e6ed;         /* Arctic White */
-            --text-secondary: #94a3b8;       /* Fog Grey */
-            
-            /* Night Signal Palette */
-            --accent-color: #fbbf24;         /* Amber Warning (Primary) */
-            --danger-color: #ef4444;         /* Emergency Red */
-            --success-color: #10b981;        /* Sync Green */
-            --info-color: #3b82f6;           /* Data Blue */
-            
-            /* Brutalist Structure */
-            --border-thick: 2px solid #334155;
-            --border-light: 1px dashed #334155;
-            --radius-sm: 0px;                /* Hard Edges */
-            --font-main: 'Courier Prime', 'Consolas', monospace;
-            
-            /* Spacing & Layout */
-            --container-width: 1200px;
-            --header-height: 80px;
-        }
+ <style>
+ /* [Design System Core Variables - Inherited] */
+ :root {
+ --bg-color: #0b0d12; /* Deep Void Black */
+ --text-primary: #e0e6ed; /* Arctic White */
+ --text-secondary: #94a3b8; /* Fog Grey */
+ 
+ /* Night Signal Palette */
+ --accent-color: #fbbf24; /* Amber Warning (Primary) */
+ --danger-color: #ef4444; /* Emergency Red */
+ --success-color: #10b981; /* Sync Green */
+ --info-color: #3b82f6; /* Data Blue */
+ 
+ /* Brutalist Structure */
+ --border-thick: 2px solid #334155;
+ --border-light: 1px dashed #334155;
+ --radius-sm: 0px; /* Hard Edges */
+ --font-main: 'Courier Prime', 'Consolas', monospace;
+ 
+ /* Spacing & Layout */
+ --container-width: 1200px;
+ --header-height: 80px;
+ }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            font-family: var(--font-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+ body {
+ background-color: var(--bg-color);
+ color: var(--text-primary);
+ font-family: var(--font-main);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
 
-        /* [Layout System - Grid & Container] */
-        .wrapper {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 2rem;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            border-left: var(--border-thick) solid var(--bg-color); /* Subtle Edge */
-        }
+ /* [Layout System - Grid & Container] */
+ .wrapper {
+ max-width: var(--container-width);
+ margin: 0 auto;
+ padding: 2rem;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ border-left: var(--border-thick) solid var(--bg-color); /* Subtle Edge */
+ }
 
-        /* [Navigation & Hamburger] */
-        header {
-            height: var(--header-height);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: var(--border-thick) solid #334155;
-            margin-bottom: 2rem;
-            position: sticky;
-            top: 0;
-            background-color: rgba(11, 13, 18, 0.95);
-            z-index: 100;
-        }
+ /* [Navigation & Hamburger] */
+ header {
+ height: var(--header-height);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: var(--border-thick) solid #334155;
+ margin-bottom: 2rem;
+ position: sticky;
+ top: 0;
+ background-color: rgba(11, 13, 18, 0.95);
+ z-index: 100;
+ }
 
-        .brand { font-size: 1.25rem; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; color: var(--accent-color); cursor: pointer;}
-        
-        nav ul { display: flex; list-style: none; gap: 2rem; }
-        nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; position: relative;}
-        nav a:hover, nav a.active { color: var(--accent-color); }
-        
-        /* Hamburger Menu */
-        .hamburger-btn { display: flex; flex-direction: column; gap: 6px; cursor: pointer; padding-right: 20px; border-left: var(--border-thick) solid #334155;}
-        .hamburger-bar { width: 24px; height: 3px; background-color: var(--text-primary); transition: all 0.3s; }
+ .brand { font-size: 1.25rem; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; color: var(--accent-color); cursor: pointer;}
+ 
+ nav ul { display: flex; list-style: none; gap: 2rem; }
+ nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; position: relative;}
+ nav a:hover, nav a.active { color: var(--accent-color); }
+ 
+ /* Hamburger Menu */
+ .hamburger-btn { display: flex; flex-direction: column; gap: 6px; cursor: pointer; padding-right: 20px; border-left: var(--border-thick) solid #334155;}
+ .hamburger-bar { width: 24px; height: 3px; background-color: var(--text-primary); transition: all 0.3s; }
 
-        @media (max-width: 768px) {
-            nav ul { display: none; position: absolute; top: var(--header-height); left: 0; right: 0; flex-direction: column; padding: 1rem; background-color: #0f121a; border-bottom: var(--border-thick) solid #334155;}
-            nav ul.show { display: flex; }
-        }
+ @media (max-width: 768px) {
+ nav ul { display: none; position: absolute; top: var(--header-height); left: 0; right: 0; flex-direction: column; padding: 1rem; background-color: #0f121a; border-bottom: var(--border-thick) solid #334155;}
+ nav ul.show { display: flex; }
+ }
 
-        /* [Content Section Styling] */
-        .section-block { margin-bottom: 4rem; animation: fadeIn 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
-        
-        h1, h2, h3 { color: var(--text-primary); border-left: 5px solid var(--accent-color); padding-left: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: -0.5px;}
-        h1 { font-size: 2.5rem; }
-        h2 { font-size: 1.75rem; border-width: 3px; }
-        
-        p, li { color: var(--text-secondary); margin-bottom: 1rem; text-align: justify; max-width: 80%; }
-        
-        /* [Special Components] */
-        .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;}
-        
-        .card-brutal {
-            border: var(--border-thick) solid #334155;
-            padding: 1.5rem;
-            background-color: rgba(255, 255, 255, 0.02);
-            position: relative;
-        }
-        
-        .card-header { font-weight: bold; color: var(--accent-color); margin-bottom: 0.5rem; display: block; text-transform: uppercase;}
-        .data-point { display: flex; justify-content: space-between; border-top: 1px dashed #334155; padding-top: 0.5rem; margin-top: 0.5rem;}
+ /* [Content Section Styling] */
+ .section-block { margin-bottom: 4rem; animation: fadeIn 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+ 
+ h1, h2, h3 { color: var(--text-primary); border-left: 5px solid var(--accent-color); padding-left: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: -0.5px;}
+ h1 { font-size: 2.5rem; }
+ h2 { font-size: 1.75rem; border-width: 3px; }
+ 
+ p, li { color: var(--text-secondary); margin-bottom: 1rem; text-align: justify; max-width: 80%; }
+ 
+ /* [Special Components] */
+ .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;}
+ 
+ .card-brutal {
+ border: var(--border-thick) solid #334155;
+ padding: 1.5rem;
+ background-color: rgba(255, 255, 255, 0.02);
+ position: relative;
+ }
+ 
+ .card-header { font-weight: bold; color: var(--accent-color); margin-bottom: 0.5rem; display: block; text-transform: uppercase;}
+ .data-point { display: flex; justify-content: space-between; border-top: 1px dashed #334155; padding-top: 0.5rem; margin-top: 0.5rem;}
 
-        .status-indicator { width: 8px; height: 8px; background-color: var(--success-color); display: inline-block; border-radius: 50%; box-shadow: 0 0 10px var(--success-color); }
-        
-        /* Matrix Table */
-        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;}
-        .matrix-table th, .matrix-table td { border: 1px solid #334155; padding: 0.75rem; text-align: left; }
-        .matrix-table th { background-color: rgba(255,255,255,0.05); color: var(--accent-color); }
+ .status-indicator { width: 8px; height: 8px; background-color: var(--success-color); display: inline-block; border-radius: 50%; box-shadow: 0 0 10px var(--success-color); }
+ 
+ /* Matrix Table */
+ .matrix-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;}
+ .matrix-table th, .matrix-table td { border: 1px solid #334155; padding: 0.75rem; text-align: left; }
+ .matrix-table th { background-color: rgba(255,255,255,0.05); color: var(--accent-color); }
 
-        /* [Visual Decoration - Night Transit Effect] */
-        .transit-line { height: 2px; width: 100%; background: linear-gradient(90deg, transparent, var(--info-color), transparent); margin: 2rem 0; position: relative;}
-        
-        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+ /* [Visual Decoration - Night Transit Effect] */
+ .transit-line { height: 2px; width: 100%; background: linear-gradient(90deg, transparent, var(--info-color), transparent); margin: 2rem 0; position: relative;}
+ 
+ @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
-    </style>
-  <meta property="og:url" content="https://sinchon-fullsalon-note.hardcoreroom.com/about.html">
+ </style>
+ <meta property="og:url" content="https://sinchon-fullsalon-note.hardcoreroom.com/about.html">
   <meta name="twitter:card" content="summary">
 </head>
 <body>
 
 <div class="wrapper">
-    
-    <header>
-        <div class="brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.querySelector('nav ul').classList.add('show');">
-            BALSAN<span style="color:#fff; opacity:0.5;">_SYS</span>.OS
-        </div>
-        
-        <!-- [Hamburger Menu Pattern] -->
-        <button class="hamburger-btn" onclick="document.querySelector('nav ul').classList.toggle('show')">
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-            <span class="hamburger-bar"></span>
-        </button>
+ 
+ <header>
+ <div class="brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.querySelector('nav ul').classList.add('show');">
+ BALSAN<span style="color:#fff; opacity:0.5;">_SYS</span>.OS
+ </div>
+ 
+ <!-- [Hamburger Menu Pattern] -->
+ <button class="hamburger-btn" onclick="document.querySelector('nav ul').classList.toggle('show')">
+ <span class="hamburger-bar"></span>
+ <span class="hamburger-bar"></span>
+ <span class="hamburger-bar"></span>
+ </button>
 
-        <!-- [Common Navigation] -->
-        <nav>
-            <ul>
-                <li><a href="#">[HOME]</a></li>
-                <li><a href="#">MAP_DATA</a></li>
-                <li><a href="#">INFRASTRUCTURE</a></li> <!-- Active for this page context conceptually -->
-                <li><a href="#">SIGNAL_LOG</a></li>
-            </ul>
-        </nav>
-    </header>
+ <!-- [Common Navigation] -->
+ <nav>
+ <ul>
+ <li><a href="#">[HOME]</a></li>
+ <li><a href="#">MAP_DATA</a></li>
+ <li><a href="#">INFRASTRUCTURE</a></li> <!-- Active for this page context conceptually -->
+ <li><a href="#">SIGNAL_LOG</a></li>
+ </ul>
+ </nav>
+ </header>
 
-    <main>
-        <!-- [Hero Section: Data Header] -->
-        <section class="section-block">
-            <h1>발산 지역 인프라 분석 보고서 (Night Transit Ver. 01)</h1>
-            <p>
-                발산의 밤은 단순한 어둠이 아니다. 그것은 수많은 시그널들이 춤추고, 예측 불가능한 리듬으로 흐르는 거대한 데이터의 강이다. 'Night Transit Map'은 이 도시의 숨겨진 맥박, 특히 지하 깊숙이 잠들어 있는 음향 네트워크의 복잡한 언어를 해독하려는 시도이다. 우리는 보이지 않는 전파의 흐름 속에서 주파수의 안정성을 측정하고, 미세한 통신 지연ᆫ의 그림자를 추적하며, 코인노래방이라는 현대 도시의 작은 은신처에 공급되는 전력의 불균일한 리듬을 기록했다. 이 보고서는 단순한 수치 나열을 넘어, 발산의 밤이 들려주는 미스터리한 이야기를 담아내고자 한다.
-            </p>
-        </section>
+ <main>
+ <!-- [Hero Section: Data Header] -->
+ <section class="section-block">
+ <h1>발산 지역 인프라 분석 보고서 (Night Transit Ver. 01)</h1>
+ <p>
+ 발산의 밤은 단순한 어둠이 아니다. 그것은 수많은 시그널들이 춤추고, 예측 불가능한 리듬으로 흐르는 거대한 데이터의 강이다. 'Night Transit Map'은 이 도시의 숨겨진 맥박, 특히 지하 깊숙이 잠들어 있는 음향 네트워크의 복잡한 언어를 해독하려는 시도이다. 우리는 보이지 않는 전파의 흐름 속에서 주파수의 안정성을 측정하고, 미세한 통신 지연ᆫ의 그림자를 추적하며, 코인노래방이라는 현대 도시의 작은 은신처에 공급되는 전력의 불균일한 리듬을 기록했다. 이 보고서는 단순한 수치 나열을 넘어, 발산의 밤이 들려주는 미스터리한 이야기를 담아내고자 한다.
+ </p>
+ </section>
 
 <!-- SEO Visual 2: 코인노래방 Brutalist Typography Cards -->
 <div class="seo-visual-cards" role="img" aria-label="발산 코인노래방 추천정보 코인노래방 — 코인 노래방 정보" 
-     style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
-  <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
-    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
-    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">발산 코인노래방 추천정보</div>
-  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
-    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
-    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">발산 코인노래방 추천정보</div>
-  </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
-    <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
-    <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
-    <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">발산 코인노래방 추천정보</div>
-  </div>
+ style="display:flex;flex-direction:column;gap:80px;margin:120px auto;max-width:1100px;padding:0 24px">
+ <div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+ <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">01</div>
+ <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">특화</div>
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">발산 코인노래방 추천정보</div>
+ </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+ <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">02</div>
+ <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">다수 실적</div>
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">발산 코인노래방 추천정보</div>
+ </div><div style="display:flex;flex-direction:column;align-items:flex-start;background:transparent;padding:0;border:none;box-shadow:none">
+ <div style="font-family:serif;font-weight:900;font-size:3.5rem;color:#000000;line-height:1;margin-bottom:12px;letter-spacing:-0.03em">03</div>
+ <div style="font-weight:800;font-size:1.6rem;color:#000000;letter-spacing:-0.02em;margin-bottom:8px">고품질</div>
+ <div style="font-family:monospace;font-size:0.75rem;letter-spacing:0.2em;color:#666666;text-transform:uppercase">발산 코인노래방 추천정보</div>
+ </div>
 </div>
 
-        <div class="transit-line"></div>
+ <div class="transit-line"></div>
 
-        <!-- [Section 1: Underground Acoustic Network Pulse] -->
-        <section class="section-block">
-            <h2>지하 음향 네트워크의 맥박</h2>
-            <p>
-                발산의 지하에는 수많은 목소리가 오간다. 코인노래방의 마이크를 타고 흐르는 희미한 에코부터, 지하철 노선도를 따라 퍼지는 알 수 없는 전파까지, 도시는 낮과 밤을 가리지 않고 끊임없아 신호를 주고받는다. 이 보고서는 이러한 비가시적인 연결망을 하나의 유기체로 상정하고, 그 심장 박동과ᅪ 같은 주파수 안정성을 면밀히 관찰한다. 특정 시간대에 나타나는 미묘한 주파수 이탈은 무엇을 의미하는가? 그것은 과연 우연한 노이즈인가, 아니면 도시의 무의식이 보내는 은밀한 메시지인가? 우리는 발사ᅡᆫ의 깊은 곳에서 울려 퍼지는 이러한 질문의 답을 찾기 위해, 밤의 정적 속에서 더욱 예민하게 귀 기울였다.
-            </p>
-            <div class="signal-grid">
-                <div class="card-brutal">
-                    <span class="card-header">주파수 안정성</span>
-                    <div class="data-point">
-                        <span>평균 편차</span>
-                        <span>0.03% <span class="status-indicator" style="background-color: var(--success-color);"></span></span>
-                    </div>
-                    <div class="data-point">
-                        <span>최대 이탈</span>
-                        <span>1.2% <span class="status-indicator" style="background-color: var(--danger-color);"></span></span>
-                    </div>
-                </div>
-                <div class="card-brutal">
-                    <span class="card-header">통신 지연률</span>
-                    <div class="data-point">
-                        <span>평균 지연</span>
-                        <span>15ms <span class="status-indicator" style="background-color: var(--success-color);"></span></span>
-                    </div>
-                    <div class="data-point">
-                        <span>피크 지연</span>
-                        <span>120ms <span class="status-indicator" style="background-color: var(--danger-color);"></span></span>
-                    </div>
-                </div>
-                <div class="card-brutal">
-                    <span class="card-header">전력 공급 리듬</span>
-                    <div class="data-point">
-                        <span>평균 전압</span>
-                        <span>218V <span class="status-indicator" style="background-color: var(--info-color);"></span></span>
-                    </div>
-                    <div class="data-point">
-                        <span>최저 전압</span>
-                        <span>195V <span class="status-indicator" style="background-color: var(--danger-color);"></span></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+ <!-- [Section 1: Underground Acoustic Network Pulse] -->
+ <section class="section-block">
+ <h2>지하 음향 네트워크의 맥박</h2>
+ <p>
+ 발산의 지하에는 수많은 목소리가 오간다. 코인노래방의 마이크를 타고 흐르는 희미한 에코부터, 지하철 노선도를 따라 퍼지는 알 수 없는 전파까지, 도시는 낮과 밤을 가리지 않고 끊임없아 신호를 주고받는다. 이 보고서는 이러한 비가시적인 연결망을 하나의 유기체로 상정하고, 그 심장 박동과ᅪ 같은 주파수 안정성을 면밀히 관찰한다. 특정 시간대에 나타나는 미묘한 주파수 이탈은 무엇을 의미하는가? 그것은 과연 우연한 노이즈인가, 아니면 도시의 무의식이 보내는 은밀한 메시지인가? 우리는 발사ᅡᆫ의 깊은 곳에서 울려 퍼지는 이러한 질문의 답을 찾기 위해, 밤의 정적 속에서 더욱 예민하게 귀 기울였다.
+ </p>
+ <div class="signal-grid">
+ <div class="card-brutal">
+ <span class="card-header">주파수 안정성</span>
+ <div class="data-point">
+ <span>평균 편차</span>
+ <span>0.03% <span class="status-indicator" style="background-color: var(--success-color);"></span></span>
+ </div>
+ <div class="data-point">
+ <span>최대 이탈</span>
+ <span>1.2% <span class="status-indicator" style="background-color: var(--danger-color);"></span></span>
+ </div>
+ </div>
+ <div class="card-brutal">
+ <span class="card-header">통신 지연률</span>
+ <div class="data-point">
+ <span>평균 지연</span>
+ <span>15ms <span class="status-indicator" style="background-color: var(--success-color);"></span></span>
+ </div>
+ <div class="data-point">
+ <span>피크 지연</span>
+ <span>120ms <span class="status-indicator" style="background-color: var(--danger-color);"></span></span>
+ </div>
+ </div>
+ <div class="card-brutal">
+ <span class="card-header">전력 공급 리듬</span>
+ <div class="data-point">
+ <span>평균 전압</span>
+ <span>218V <span class="status-indicator" style="background-color: var(--info-color);"></span></span>
+ </div>
+ <div class="data-point">
+ <span>최저 전압</span>
+ <span>195V <span class="status-indicator" style="background-color: var(--danger-color);"></span></span>
+ </div>
+ </div>
+ </div>
+ </section>
 
-        <div class="transit-line"></div>
+ <div class="transit-line"></div>
 
-        <!-- [Section 2: Deep Data Analysis] -->
-        <section class="section-block">
-            <h2>데이타 심층 분석: 주파수, 지연, 전력의 변주곡</h2>
-            <p>
-                우리의 센서는 발산의 밤을 가로지르는 무형의 통신선 위에서 춤추는 데이터 패킷들의 여정을 추적했다. 특정 코인노래방 구역에ᅦ서 감지되는 통신 지연률은 단순히 기술적인 결함을 넘어, 도시의 활력과 인구 밀집도, 그리고 때로는 사람들의 감정적 밀도와도 연결되는 듯했다. 마이크를 잡고 터져 나오는 열정적인 고음과, 그에 반응하는 네트워크의 미세한 떨림 사이에는 분명 어떤 상관관계가 존재할 것이다. 또한, 전력 공급 리듬ᄋ은 밤의 장막 아래에서 더욱 불규칙한 변주를 보였다. 피크 시간대에 일시적으로ᅩ 떨어지는 전압은, 마치 도시 전체가 숨을 크게 ᄃ들이쉬고 내쉬는 듯한 광경을 연출했다. 이는 발산이라는 공간이 단순한 물리적 구조물이 아닌, 살아 숨 쉬는 거대한 시스템임을 증명하느ᄖ 증거였다.
-            </p>
-            <p>
-                특히 흥미로운 것은 주말 밤 10시에서 새벽 2시 사이, 발산역 인근의 특정 코인노래방 밀집 지역에서 말생하는 동시다발적인 신호 불안정 현상이었다. 이는 단순한 트래픽 증가로 설명하기 어려운, 마치 밤의 에너지가 한데 모여 공간의 물리적 한계를 넘어서려는 시도처럼 보였다. 이러한 현상은 해당 시간대 코인노래방의 '열창 지수'와 거의 일치하는 경향을 보였는데, 이는 인간의 강렬한 감정 에너지가 미시적인 전자기파에 영향을 미칠 수 있다는 가설을 조심스럽게 제기하게 한다. 발산의 인프라는 단순한 콘크리트와 전선이 아니라, 도시민의 삶과 감정이 얽히고설킨 복잡한 신경망인 것이다.
-            </p>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>분석 지표</th>
-                        <th>평균 값</th>
-                        <th>최대 변동 폭</th>
-                        <th>주요 영향 요인</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>주파수 안정성 (Hz)</td>
-                        <td>4.98GHz</td>
-                        <td>± 0.05GHz</td>
-                        <td>인구 밀집, 무선 기기 사용량</td>
-                    </tr>
-                    <tr>
-                        <td>통신 지연률 (ms)</td>
-                        <td>32ms</td>
-                        <td>180ms (피크)</td>
-                        <td>데이터 트래픽, 지하 구조물</td>
-                    </tr>
-                    <tr>
-                        <td>전력 공급 (V)</td>
-                        <td>220V</td>
-                        <td>190V ~ 230V</td>
-                        <td>샘야 상업 시설 가동, 계절</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+ <!-- [Section 2: Deep Data Analysis] -->
+ <section class="section-block">
+ <h2>데이타 심층 분석: 주파수, 지연, 전력의 변주곡</h2>
+ <p>
+ 우리의 센서는 발산의 밤을 가로지르는 무형의 통신선 위에서 춤추는 데이터 패킷들의 여정을 추적했다. 특정 코인노래방 구역에ᅦ서 감지되는 통신 지연률은 단순히 기술적인 결함을 넘어, 도시의 활력과 인구 밀집도, 그리고 때로는 사람들의 감정적 밀도와도 연결되는 듯했다. 마이크를 잡고 터져 나오는 열정적인 고음과, 그에 반응하는 네트워크의 미세한 떨림 사이에는 분명 어떤 상관관계가 존재할 것이다. 또한, 전력 공급 리듬ᄋ은 밤의 장막 아래에서 더욱 불규칙한 변주를 보였다. 피크 시간대에 일시적으로ᅩ 떨어지는 전압은, 마치 도시 전체가 숨을 크게 ᄃ들이쉬고 내쉬는 듯한 광경을 연출했다. 이는 발산이라는 공간이 단순한 물리적 구조물이 아닌, 살아 숨 쉬는 거대한 시스템임을 증명하느ᄖ 증거였다.
+ </p>
+ <p>
+ 특히 흥미로운 것은 주말 밤 10시에서 새벽 2시 사이, 발산역 인근의 특정 코인노래방 밀집 지역에서 말생하는 동시다발적인 신호 불안정 현상이었다. 이는 단순한 트래픽 증가로 설명하기 어려운, 마치 밤의 에너지가 한데 모여 공간의 물리적 한계를 넘어서려는 시도처럼 보였다. 이러한 현상은 해당 시간대 코인노래방의 '열창 지수'와 거의 일치하는 경향을 보였는데, 이는 인간의 강렬한 감정 에너지가 미시적인 전자기파에 영향을 미칠 수 있다는 가설을 조심스럽게 제기하게 한다. 발산의 인프라는 단순한 콘크리트와 전선이 아니라, 도시민의 삶과 감정이 얽히고설킨 복잡한 신경망인 것이다.
+ </p>
+ <table class="matrix-table">
+ <thead>
+ <tr>
+ <th>분석 지표</th>
+ <th>평균 값</th>
+ <th>최대 변동 폭</th>
+ <th>주요 영향 요인</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>주파수 안정성 (Hz)</td>
+ <td>4.98GHz</td>
+ <td>± 0.05GHz</td>
+ <td>인구 밀집, 무선 기기 사용량</td>
+ </tr>
+ <tr>
+ <td>통신 지연률 (ms)</td>
+ <td>32ms</td>
+ <td>180ms (피크)</td>
+ <td>데이터 트래픽, 지하 구조물</td>
+ </tr>
+ <tr>
+ <td>전력 공급 (V)</td>
+ <td>220V</td>
+ <td>190V ~ 230V</td>
+ <td>샘야 상업 시설 가동, 계절</td>
+ </tr>
+ </tbody>
+ </table>
+ </section>
 
-        <div class="transit-line"></div>
+ <div class="transit-line"></div>
 
-        <!-- [Section 3: Conclusion & Outlook] -->
-        <section class="section-block">
-            <h2>'Night Transit Map'의 지평을 열며</h2>
-            <p>
-                이 'Night Transit Map'은 발산의 인프라를 새로운 관점에서 조명한다. 우리는 익숙했던 공간의 이면에서 작동하는 복잡한 메커니즘을 시각화하고, 그 안에서 발견되는 패턴들을 통해 도시의 미래를 엿ᄇ보려 한다. 이 지도는 단순한 통계 보고서가 아니다. 그것은 발산의 밤을 유영하는 미지의 존재들을 위한 암호 해독기이자, 도시의 심연에 숨겨진 이야기를 탐색하는 여정의 시작이다. 다음 버전에서는 코인노래방 스펙 비교를 더욱 심층적으로 다루며, 각 공간이 발산 네트워크에 미치는 영향력을 분석할 예정이다. 어둠 속에서 빛나는 시그널들을 따라, 우리는 계속해서 이 도시의 비밀스러운 지도를 그려나갈 것이다. 발산의 밤은 아직 다 말하지 못한 수많은 이야기를 품고 있으며, 우리는 그 이야기의 다음 장을 열 준비가 되어 있다.
-            </p>
-        
+ <!-- [Section 3: Conclusion & Outlook] -->
+ <section class="section-block">
+ <h2>'Night Transit Map'의 지평을 열며</h2>
+ <p>
+ 이 'Night Transit Map'은 발산의 인프라를 새로운 관점에서 조명한다. 우리는 익숙했던 공간의 이면에서 작동하는 복잡한 메커니즘을 시각화하고, 그 안에서 발견되는 패턴들을 통해 도시의 미래를 엿ᄇ보려 한다. 이 지도는 단순한 통계 보고서가 아니다. 그것은 발산의 밤을 유영하는 미지의 존재들을 위한 암호 해독기이자, 도시의 심연에 숨겨진 이야기를 탐색하는 여정의 시작이다. 다음 버전에서는 코인노래방 스펙 비교를 더욱 심층적으로 다루며, 각 공간이 발산 네트워크에 미치는 영향력을 분석할 예정이다. 어둠 속에서 빛나는 시그널들을 따라, 우리는 계속해서 이 도시의 비밀스러운 지도를 그려나갈 것이다. 발산의 밤은 아직 다 말하지 못한 수많은 이야기를 품고 있으며, 우리는 그 이야기의 다음 장을 열 준비가 되어 있다.
+ </p>
+ 
 <div class="seo-visual-divider" role="separator" aria-label="발산 코인노래방 추천정보 구분선" style="margin:80px 0;height:1px;background:#666666;opacity:0.1"></div>
 </section>
 
-    </main>
+ </main>
 </div>
 
 <script>
-    // Simple JavaScript for hamburger menu - already present conceptually
-    document.addEventListener('DOMContentLoaded', () => {
-        const hamburgerBtn = document.querySelector('.hamburger-btn');
-        const navUl = document.querySelector('nav ul');
-        
-        if (hamburgerBtn && navUl) {
-            hamburgerBtn.addEventListener('click', () => {
-                navUl.classList.toggle('show');
-            });
-        }
+ // Simple JavaScript for hamburger menu - already present conceptually
+ document.addEventListener('DOMContentLoaded', () => {
+ const hamburgerBtn = document.querySelector('.hamburger-btn');
+ const navUl = document.querySelector('nav ul');
+ 
+ if (hamburgerBtn && navUl) {
+ hamburgerBtn.addEventListener('click', () => {
+ navUl.classList.toggle('show');
+ });
+ }
 
-        // Optional: Close menu when clicking outside (for mobile)
-        document.addEventListener('click', (event) => {
-            if (!navUl.contains(event.target) && !hamburgerBtn.contains(event.target) && navUl.classList.contains('show')) {
-                navUl.classList.remove('show');
-            }
-        });
-    });
+ // Optional: Close menu when clicking outside (for mobile)
+ document.addEventListener('click', (event) => {
+ if (!navUl.contains(event.target) && !hamburgerBtn.contains(event.target) && navUl.classList.contains('show')) {
+ navUl.classList.remove('show');
+ }
+ });
+ });
 </script>
 
 </body>
