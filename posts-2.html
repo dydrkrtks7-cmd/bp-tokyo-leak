@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (2/2) · tokyo-leak</title>
+  <meta name="description" content="tokyo-leak에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sinchon-fullsalon-note.hardcoreroom.com/posts-2.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* [Design System Core Variables - Inherited] */
+ :root {
+ --bg-color: #0b0d12; /* Deep Void Black */
+ --text-primary: #e0e6ed; /* Arctic White */
+ --text-secondary: #94a3b8; /* Fog Grey */
+ 
+ /* Night Signal Palette */
+ --accent-color: #fbbf24; /* Amber Warning (Primary) */
+ --danger-color: #ef4444; /* Emergency Red */
+ --success-color: #10b981; /* Sync Green */
+ --info-color: #3b82f6; /* Data Blue */
+ 
+ /* Brutalist Structure */
+ --border-thick: 2px solid #334155;
+ --border-light: 1px dashed #334155;
+ --radius-sm: 0px; /* Hard Edges */
+ --font-main: 'Courier Prime', 'Consolas', monospace;
+ 
+ /* Spacing & Layout */
+ --container-width: 1200px;
+ --header-height: 80px;
+ }
+
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+ body {
+ background-color: var(--bg-color);
+ color: var(--text-primary);
+ font-family: var(--font-main);
+ line-height: 1.6;
+ overflow-x: hidden;
+ }
+
+ /* [Layout System - Grid & Container] */
+ .wrapper {
+ max-width: var(--container-width);
+ margin: 0 auto;
+ padding: 2rem;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ border-left: var(--border-thick) solid var(--bg-color); /* Subtle Edge */
+ }
+
+ /* [Navigation & Hamburger] */
+ header {
+ height: var(--header-height);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: var(--border-thick) solid #334155;
+ margin-bottom: 2rem;
+ position: sticky;
+ top: 0;
+ background-color: rgba(11, 13, 18, 0.95);
+ z-index: 100;
+ }
+
+ .brand { font-size: 1.25rem; font-weight: bold; letter-spacing: -1px; text-transform: uppercase; color: var(--accent-color); cursor: pointer;}
+ 
+ nav ul { display: flex; list-style: none; gap: 2rem; }
+ nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.3s; position: relative;}
+ nav a:hover, nav a.active { color: var(--accent-color); }
+ 
+ /* Hamburger Menu */
+ .hamburger-btn { display: flex; flex-direction: column; gap: 6px; cursor: pointer; padding-right: 20px; border-left: var(--border-thick) solid #334155;}
+ .hamburger-bar { width: 24px; height: 3px; background-color: var(--text-primary); transition: all 0.3s; }
+
+ @media (max-width: 768px) {
+ nav ul { display: none; position: absolute; top: var(--header-height); left: 0; right: 0; flex-direction: column; padding: 1rem; background-color: #0f121a; border-bottom: var(--border-thick) solid #334155;}
+ nav ul.show { display: flex; }
+ }
+
+ /* [Content Section Styling] */
+ .section-block { margin-bottom: 4rem; animation: fadeIn 0.8s ease-out forwards; opacity: 0; transform: translateY(20px); }
+ 
+ h1, h2, h3 { color: var(--text-primary); border-left: 5px solid var(--accent-color); padding-left: 1rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: -0.5px;}
+ h1 { font-size: 2.5rem; }
+ h2 { font-size: 1.75rem; border-width: 3px; }
+ 
+ p, li { color: var(--text-secondary); margin-bottom: 1rem; text-align: justify; max-width: 80%; }
+ 
+ /* [Special Components] */
+ .signal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;}
+ 
+ .card-brutal {
+ border: var(--border-thick) solid #334155;
+ padding: 1.5rem;
+ background-color: rgba(255, 255, 255, 0.02);
+ position: relative;
+ }
+ 
+ .card-header { font-weight: bold; color: var(--accent-color); margin-bottom: 0.5rem; display: block; text-transform: uppercase;}
+ .data-point { display: flex; justify-content: space-between; border-top: 1px dashed #334155; padding-top: 0.5rem; margin-top: 0.5rem;}
+
+ .status-indicator { width: 8px; height: 8px; background-color: var(--success-color); display: inline-block; border-radius: 50%; box-shadow: 0 0 10px var(--success-color); }
+ 
+ /* Matrix Table */
+ .matrix-table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.9rem;}
+ .matrix-table th, .matrix-table td { border: 1px solid #334155; padding: 0.75rem; text-align: left; }
+ .matrix-table th { background-color: rgba(255,255,255,0.05); color: var(--accent-color); }
+
+ /* [Visual Decoration - Night Transit Effect] */
+ .transit-line { height: 2px; width: 100%; background: linear-gradient(90deg, transparent, var(--info-color), transparent); margin: 2rem 0; position: relative;}
+ 
+ @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+ </style>
+  <meta property="og:title" content="글 목록 (2/2) · tokyo-leak">
+  <meta property="og:description" content="tokyo-leak에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sinchon-fullsalon-note.hardcoreroom.com/posts-2.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="brand" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); document.querySelector('nav ul').classList.add('show');">
+ BALSAN<span style="color:#fff; opacity:0.5;">_SYS</span>.OS
+ </div>
+ 
+ <!-- [Hamburger Menu Pattern] -->
+ <button class="hamburger-btn" onclick="document.querySelector('nav ul').classList.toggle('show')">
+ <span class="hamburger-bar"></span>
+ <span class="hamburger-bar"></span>
+ <span class="hamburger-bar"></span>
+ </button>
+
+ <!-- [Common Navigation] -->
+ <nav>
+ <ul>
+ <li><a href="#">[HOME]</a></li>
+ <li><a href="#">MAP_DATA</a></li>
+ <li><a href="#">INFRASTRUCTURE</a></li> <!-- Active for this page context conceptually -->
+ <li><a href="#">SIGNAL_LOG</a></li>
+ </ul>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 36개 · 2/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0296.html">발산 코인노래방 추천정보 검증과 구글 신뢰 지수 모발이식 솔루션 분석</a>
+        <p class="post-item__summary">온라인 환경에서 올바른 선택을 내리기 위해 발산 코인노래방 추천정보를 검증하는 과정은 필수적인 역량이 되었습니다. 정보의 홍수 속에서 우리는 어떻게 신뢰할 수 있는 정보를 선별해야 할까요? 오늘은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0078.html">발산 코인노래방 추천정보 비교로 알아보는 공덕 셔츠룸 추천정보 가이드</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 찾으시는 분들은 주로 가성비와 접근성을 중요한 가치로 삼습니다. 반면 차별화된 접대 공간을 고민하는 분들은 공덕 셔츠룸 시스템의 독특한 운영 방식을 궁금해하시곤 합니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0079.html">발산 코인노래방 추천정보 이후 확인하는 연남 유흥 추천정보 실패 방지</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 통해 간단한 여가 공간을 찾는 과정에서 느끼는 만족감과 전문 유흥 업소의 방문 만족도는 전혀 다른 지점에서 결정됩니다. 많은 이들이 사전 조사 없이 무작정 방문했다가 예약</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0080.html">발산 코인노래방 추천정보 비교 체크리스트로 본 마곡 가라오케 추천정보</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 비교하다 보면 가벼운 음주와 함께 즐길 수 있는 마곡 지역의 전문 시설로 관심사가 확장되는 경우가 많습니다. 가라오케는 단순한 노래 공간을 넘어, 쾌적한 시설과 접근성, </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0081.html">발산 코인노래방 추천정보 확인하고 마곡 유흥 추천정보 탐색하기</a>
+        <p class="post-item__summary">퇴근 후 지인들과 발산 코인노래방 추천정보를 검색하며 가볍게 노래를 부르려던 계획이 예상치 못한 규모의 번화가 방문으로 이어지는 경우가 많습니다. 마곡은 신도시 특유의 정갈함과 현대적인 상업 시설이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0082.html">발산 코인노래방 추천정보 비교하며 합정 노래방 추천정보 분석</a>
+        <p class="post-item__summary">많은 이들이 발산 코인노래방 추천정보를 찾아보면서 얻은 지식을 바탕으로 다른 지역의 노래방도 비슷할 것이라고 오해하곤 합니다. 하지만 합정 지역의 노래방 문화는 독특한 개성을 지닌 카페와 공연장이 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0083.html">발산 코인노래방 추천정보 파악 후 연남 클럽 추천정보 정리</a>
+        <p class="post-item__summary">음악과 분위기, 그리고 안전한 환경이라는 세 가지 충족 조건이 완성될 때 비로소 즐거운 밤 문화가 시작됩니다. 발산 코인노래방 추천정보를 보며 가벼운 유흥을 즐기던 경험과는 차원이 다른 밀도 높은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0084.html">발산 코인노래방 추천정보 확인하며 찾는 합정 셔츠룸 추천정보</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 찾던 분들이라면 이제 합정 지역의 유흥 문화에도 관심을 갖게 되실 겁니다. 과연 여러분은 어떤 기준으로 업체를 선택하고 계신가요? 단순히 가까운 거리에 위치한 곳이 아닌,</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0085.html">발산 코인노래방 추천정보 활용하는 공덕 가라오케 추천정보 팁</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 검색하는 습관은 이제 지역별 유흥 시설을 찾는 효율적인 방법이 되었습니다. 공덕 가라오케 추천정보를 얻기 위해서도 체계적인 단계가 필요합니다. 1단계는 웹상의 정보와 실제</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0086.html">발산 코인노래방 추천정보 비교하고 따져보는 상수 마사지 추천정보</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 찾던 분들이 이제는 휴식을 위해 상수 마사지 추천정보를 찾고 있습니다. 여러분은 저렴한 가격의 업체를 선호하시나요, 아니면 고가의 프리미엄 서비스를 선호하시나요? 두 가지</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0087.html">발산 코인노래방 추천정보 확인 전 망원 노래방 추천정보 비교하기</a>
+        <p class="post-item__summary">많은 이들이 발산 코인노래방 추천정보를 검색하며 즐거운 시간을 계획하지만, 막상 현장에 도착해 예약 절차가 복잡하여 낭패를 보는 경우가 빈번합니다. 시스템의 이해도가 부족하면 원하는 시간대에 방을 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260722-0088.html">발산 코인노래방 추천정보 기반 홍대 노래방 추천정보 확인 항목</a>
+        <p class="post-item__summary">발산 코인노래방 추천정보를 참고하는 과정에서 노래방의 접근성을 확인하는 것은 만족스러운 경험을 위한 첫걸음입니다. 지리적 위치가 지하철역에서 얼마나 떨어져 있는지, 혹은 도보로 이동할 때 안전하고 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-002-r10upk.html">DevOps 엔지니어의 AWS 프리티어 계정 운영 비극</a>
+        <p class="post-item__summary">백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: AWS 프리티어 계정 활용 노하우</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-104xcwp.html">발산 코인노래방 추천정보 처음 알아볼 때 실제로 많이 묻는 질문 5가지</a>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-001-1wwlsky.html">발산 코인노래방 추천정보</a>
+        <p class="post-item__summary">발산 지역에서는 다양한 형태의 여가 시설이 운영되고 있으며, 그중 코인노래방은 저렴한 비용으로 음악을 즐길 수 있는 대표적인 공간으로 자리 잡고 있습니다. 노래방을 선택할 때는 노래 기종, 실내 환</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/review-001.html">발산 코인노래방 추천정보</a>
+        <p class="post-item__summary">서울의 여러 지역 중 발산은 편리한 교통 접근성과 함께 다양한 여가 시설을 보유한 곳으로 알려져 있습니다. 이 지역에서 코인노래방을 찾아보실 때 중요한 것은 내부 환경의 청결함과 기기 상태입니다. </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <a class="pager__link" href="posts.html">1</a>
+      <span class="pager__current">2</span>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
