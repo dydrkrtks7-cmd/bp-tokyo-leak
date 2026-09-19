@@ -16,6 +16,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://sinchon-fullsalon-note.hardcoreroom.com/posts.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://sinchon-fullsalon-note.hardcoreroom.com/posts/field_note-001-1mywnjz.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -57,11 +62,6 @@
   </url>
   <url>
     <loc>https://sinchon-fullsalon-note.hardcoreroom.com/posts/qa-001-104xcwp.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sinchon-fullsalon-note.hardcoreroom.com/posts.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
